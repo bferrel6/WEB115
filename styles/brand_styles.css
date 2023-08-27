@@ -60,6 +60,16 @@ div.gallery > p {
 
 /** color scheme swatches **/
 
+div.dots {
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	vertical-align: center;
+}
+
+span > p {
+	padding-top: 30px;
+}
+
 .blackdot {
 	height: 150px;
 	width: 150px;
