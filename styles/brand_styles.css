@@ -4,7 +4,10 @@ body{
 	font-family: Corbel, sans-serif;
 	color: #fae1dfff;	
 	background-color: #546a7bff;
+	min-width: 400px;
+	max-width: 1440px;
 	text-align: center;
+	margin: 0 auto;
 }
 
 h1{
