@@ -73,10 +73,9 @@ nav > ul > li > a{
 
 /** image sidebars**/
 .sidebar {
-	display: float;
 	float: right;
   padding-top: 0;
-  margin: 0 5px 15px 0;
+  margin: 10px 15px 0 5px;
 }
 
 /** flex galleries **/
@@ -104,53 +103,40 @@ div.dots {
 	vertical-align: center;
 }
 
-span > p {
-	padding-top: 40px;
+span > label {
+  vertical-align: -55px;
+}
+
+span.blackdot,
+span.grey1dot,
+span.grey2dot,
+span.pinkdot,
+span.desertdot {
+  height: 150px;
+	width: 150px;
+  border: 5px solid white;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 .blackdot {
-	height: 150px;
-	width: 150px;
 	background-color: #0d1f2dff;
-	border: 5px solid white;
-	border-radius: 50%;
-	display: inline-block;
 }
 
 .grey1dot{
-	height: 150px;
-	width: 150px;
 	background-color: #546a7bff;
-	border: 5px solid white;
-	border-radius: 50%;
-	display: inline-block;
 }
 
 .grey2dot{
-	height: 150px;
-	width: 150px;
 	background-color: #9ea3b0ff;  
-	border: 5px solid white;
-	border-radius: 50%;
-	display: inline-block;
 }
 
 .pinkdot{
-	height: 150px;
-	width: 150px;
 	background-color: #fae1dfff;
-	border: 5px solid white;
-	border-radius: 50%;
-	display: inline-block;
 }
 
 .desertdot{
-	height: 150px;
-	width: 150px;
 	background-color: #e4c3adff; 
-	border: 5px solid white;
-	border-radius: 50%;
-	display: inline-block;
 }
 
 /** font gallery **/
