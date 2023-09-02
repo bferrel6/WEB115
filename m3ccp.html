@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ben Ferrell's Bleak Fenrir | WEB115 | Console/Code Play</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/default.css">
+
+    <!--     
+        Structure of HTML5 semantic layout swiped from PHP Fiddle and modified
+        to include validing code and validation buttons and some other tweaks
+
+        +===================================+
+        |               header              |
+        +===================================+
+        |                 nav               |
+        +=====================+=============+
+        |                     |             |
+        |       section       |    aside    |
+        |
+        +=====================+=============+    
+        |          footer/tagline           |
+        |         validation buttons        |
+        +===================================+
+        
+        The code from Internet
+        
+        http://phpfiddle.org        
+    -->
+</head>
+
+<body>
+    <header>
+        <h1>Ben Ferrell's Bleak Fenrir | WEB115</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">index</a></li>
+                    <li><a href="m1contract.html">contract</a></li>
+                    <li><a href="introduction.html">introduction</a></li>
+                    <li><a href="m2brand.html">brand</a></li>
+                    <li><a href="m3ccp.html">code play</a></li>
+                </ul>
+            </nav>
+    </header>
+   
+    <main>
+        <h2>Console / Code Play</h2>
+        <ol class="codeplay">
+            <li>
+                <pre class="cp_inputs">&#8811; 4 + ' towels'</pre>
+                <div class="cp_outputs">&#8810; 4 towels</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; 'towels ' + 4</pre>
+                <div class="cp_outputs">&#8810; towels 4</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; var name = getInput();</pre>
+                <div class="cp_outputs">&#8810; ReferenceError{getInput is not defined}
+                    </div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; var name = prompt();</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; name</pre>
+                <div class="cp_outputs">&#8810; Super Duper</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; name = prompt();</pre>
+                <div class="cp_outputs">&#8810; James May</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; name</pre>
+                <div class="cp_outputs">&#8810; James May</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; name = "My name is " + prompt();</pre>
+                <div class="cp_outputs">&#8810; My name is James May</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; var team = "My favorite team is " + prompt();</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; name + " and " + team</pre>
+                <div class="cp_outputs">&#8810; My name is James May and My favorite team is Carolina Hurricanes</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; name + ". " + team</pre>
+                <div class="cp_outputs">&#8810; My name is James May. My favorite team is Carolina Hurricanes</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; apples = 4 + 1 + 1976;</pre>
+                <div class="cp_outputs">&#8810; 1981</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; macintosh = 1 + 24 + 1984;</pre>
+                <div class="cp_outputs">&#8810; 2009</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; apples + macintosh;</pre>
+                <div class="cp_outputs">&#8810; 3990</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; apples * macintosh;</pre>
+                <div class="cp_outputs">&#8810; 3979829</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; apples - macintosh;</pre>
+                <div class="cp_outputs">&#8810; -28</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; macintosh - apples;</pre>
+                <div class="cp_outputs">&#8810; 1.0141342756183747</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; apples * macintosh / apples;</pre>
+                <div class="cp_outputs">&#8810; 2009</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; radius = 12;</pre>
+                <div class="cp_outputs">&#8810; 12</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; circle(radius)</pre>
+                <div class="cp_outputs">&#8810; 452.38934211696</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; radius = 4</pre>
+                <div class="cp_outputs">&#8810; 4</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; circle(radius)</pre>
+                <div class="cp_outputs">&#8810; 50.26548245744</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; function movienight(movie, time, snack) {return movie + " starts at " + </pre>
+                <pre class="cp_inputs_wrap">time + " and we still need to get " + snack + "!!!"};</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; movie = "Spiderman";</pre>
+                <div class="cp_outputs">&#8810; Spiderman</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; time = "7pm";</pre>
+                <div class="cp_outputs">&#8810; 7pm</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; snack = "popcorn";</pre>
+                <div class="cp_outputs">&#8810; popcorn</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; monster = 1000;</pre>
+                <div class="cp_outputs">&#8810; Spiderman starts at 7pm and we still need to get popcorn!!!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; function slash() {damage = Math.floor(Math.random*100); monster = monster-damage;</pre>
+                <pre class="cp_inputs_wrap">return "Monster takes " + damage + " and has " + monster + " HP remaining!";}</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash(monster);</pre>
+                <div class="cp_outputs">&#8810; Monster takes NaN and has NaN HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; damage</pre>
+                <div class="cp_outputs">&#8810; NaN</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; Math.floor(Math.random*100);</pre>
+                <div class="cp_outputs">&#8810; NaN</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; function slash() {damage = Math.floor(Math.random()*100); monster = monster-damage;</pre>
+                <pre class="cp_inputs_wrap">return "Monster takes " + damage + " and has " + monster + " HP remaining!";}</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash();</pre>
+                <div class="cp_outputs">&#8810; Monster takes 87 and has NaN HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; function slash() {damage = Math.floor(Math.random()*100); monster = monster-damage;</pre>
+                <pre class="cp_inputs_wrap">return "Monster takes " + damage + " damage and has " + monster + " HP remaining!";}</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; monster</pre>
+                <div class="cp_outputs">&#8810; NaN</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; var monster = 1000;</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash();</pre>
+                <div class="cp_outputs">&#8810; Monster takes 28 damage and has 972 HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash();</pre>
+                <div class="cp_outputs">&#8810; Monster takes 60 damage and has 912 HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash();</pre>
+                <div class="cp_outputs">&#8810; Monster takes 64 damage and has 848 HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash(100);</pre>
+                <div class="cp_outputs">&#8810; Monster takes 19 damage and has 829 HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash(monster);</pre>
+                <div class="cp_outputs">&#8810; Monster takes 64 damage and has 765 HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; monster - 765</pre>
+                <div class="cp_outputs">&#8810; 0</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash();</pre>
+                <div class="cp_outputs">&#8810; Monster takes 45 damage and has 720 HP remaining!</div>
+            </li> <!-- need 7 more -->
+            <li>
+                <pre class="cp_inputs">&#8811; monster = monster - 765;</pre>
+                <div class="cp_outputs">&#8810; 0</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; slash();</pre>
+                <div class="cp_outputs">&#8810; Monster takes 59 damage and has -59 HP remaining!</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; typeof(monster);</pre>
+                <div class="cp_outputs">&#8810; number</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; typeof(Math.random);</pre>
+                <div class="cp_outputs">&#8810; function</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; const chest = ["gold", "sword", "trap"];</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; let treasure = chest[Math.floor(Math.random() * 4)];</pre>
+                <div class="cp_outputs">&#8810; undefined</div>
+            </li>
+            <li>
+                <pre class="cp_inputs">&#8811; treasure</pre>
+                <div class="cp_outputs">&#8810; gold</div>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        <nav>
+			<ul>
+				<li><a href="https://github.com/bferrel6">github</a></li>
+				<li><a href="https://bferrel6.github.io">github.io</a></li>
+				<li><a href="https://bferrel6.github.io/web115">WEB115.io </a></li>
+				<li><a href="https://www.freecodecamp.org/bferrel6">freecodecamp </a></li>
+				<li><a href="https://www.codecademy.com/profiles/bferrel6">codecademy</a></li>
+				<li><a href="https://jsfiddle.net/user/bferrel6/fiddles/">jsfiddle</a></li>
+				<li><a href="https://www.linkedin.com/in/benjamin-ferrell-7361301a6">LinkedIn</a></li>
+			</ul>
+		</nav>
+        
+        <p>Designed by <strong>&copy;Mithril WebForge</strong><br>
+		<em>Renowned Across the Multiverse</em></p>
+        <div class="validate">	
+			<a href="http://validator.w3.org/check?uri=referer" id="validation_link_html">
+				Validate HTML
+			</a>
+		
+			<a href="http://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+				Validate CSS
+			</a>
+            <script src="scripts/validationLinks.js"></script>
+		</div>
+    </footer>
+</body>
+</html>
