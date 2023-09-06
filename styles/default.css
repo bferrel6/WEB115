@@ -11,38 +11,32 @@ body{
   	font-size: 125%;
 }
 
-article{
+div.feature{
   	text-align: left;
-  	margin: 5px 15px 5px 15px;
+	line-height: 2;
 }
 
 h1{
 	font-family: Constantia, serif;
 	background-color: #0d1f2dff;
-	padding: 0 5px 0 5px;
-	margin: 5px 15px 5px 15px;
+	border-radius: 5px;
 }
 
 h2{
-	background-color: #e4c3adff;
-	color: #0d1f2dff;
-	padding: 0 5px 0 5px;
-	margin: 5px 15px 5px 15px;
+	color: #e4c3adff;
 }
 
 h3 {
 	background-color: #0d1f2dff;
-  	padding: 0 5px 0 5px;
-  	margin: 5px 15px 5px 15px;
+	border-radius: 5px;
 }
 
 hr.horiz {
 	border: 3px dotted #9ea3b0ff;
-  	margin: 5px 15px 5px 15px;
 }
 
 /**stubborn a tags**/
-article > p > a,
+.feature > p > a,
 li.web115 > a, 
 a.figCaption {
   	color: #e4c3adff;
@@ -52,18 +46,22 @@ a.figCaption {
 nav > ul {
 	list-style-type: none;
 	display: flex;
-	padding: 0px 5px 0px 5px;
- 	margin: 5px 15px 5px 15px;
+	padding: 0;
 }
 
 nav > ul > li {
-	background-color: #9ea3b0ff;
-	border: 2px solid #0d1f2dff;
-	padding: 0px;
-  	width: 100%;
+	background-color: #e4c3adff;
+	border: 5px solid #0d1f2dff;
+	border-radius: 15px;
+	width: 100%;
+	padding: 10px;
 }
 
-nav > ul > li > a{
+nav > ul > li:hover {
+	background-color: #fae1dfff;
+}
+
+nav > ul > li > a {
   	color: #0d1f2dff;
   	text-decoration: none;
   	font-weight: bold;
@@ -72,8 +70,6 @@ nav > ul > li > a{
 /** image sidebars**/
 .sidebar {
 	float: right;
-  	padding-top: 0;
-  	margin: 10px 15px 0 5px;
 }
 
 /** flex galleries **/
@@ -115,6 +111,7 @@ span.desertdot {
 	border: 5px solid white;
 	border-radius: 50%;
 	display: inline-block;
+	margin: 0px 3% 0px 3%;
 }
 
 .blackdot {
@@ -144,7 +141,6 @@ span.desertdot {
 
 /* console code play */
 ol.codeplay {
-	margin: 0 25px 0 25px;
 	text-align: left;
 }
 
@@ -167,18 +163,27 @@ div.cp_outputs {
 	border: 1px solid #fae1dfff;
 	text-indent: 15%;
 	padding-top: 0;
-	margin-top: 0;
+	margin-bottom: 40px
 }
 
 /*footer and validation links*/
 footer {
  	display: block;
-  	margin: 80px 0 25px 0;
-	padding-top: 15px;
+	margin-bottom: 40px;
 }
 
 div.validate > a { 
-  	color: #e4c3adff;
-  	padding: 0 30px 0 30px;
+  	color: #0d1f2dff;
+	background-color: #9ea3b0ff;
+	text-decoration: none;
+  	font-weight: bolder;
+	border: 3px solid #0d1f2dff;
+	border-radius: 15px;
+	padding: 5px 40px 5px 40px;
+  	margin: 0 75px 0 75px;
+}
+
+div.validate > a:hover {
+	background-color: #fae1dfff;
 }
 
