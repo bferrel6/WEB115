@@ -7,7 +7,7 @@ body{
 	min-width: 480px;
 	max-width: 1440px;
 	text-align: center;
-	margin: 0 auto;
+	margin: 0px auto;
   	font-size: 125%;
 }
 
@@ -148,7 +148,7 @@ pre.cp_inputs,
 pre.cp_inputs_wrap {
 	color: #0d1f2dff; 
 	background-color: #fae1dfff; 
-	padding-bottom: 0;
+	padding: 0 0 0 20px;
 	margin-bottom: 0;
 }
 
