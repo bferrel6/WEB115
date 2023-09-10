@@ -49,11 +49,12 @@ nav > ul {
 }
 
 ol.toc {
-	padding-left: 33%;
+	padding-left: 27%;
 }
 
 nav > ul > li, 
-ol.toc > li {
+ol.toc > li,
+ol.subtoc > li {
 	background-color: #e4c3adff;
 	border: 5px solid #0d1f2dff;
 	border-radius: 15px;
@@ -65,17 +66,25 @@ nav > ul > li {
 }
 
 ol.toc > li {
-	width: 50%;
+	width: 60%;
+	margin: 25px 0 25px 0;
+}
+
+ol.subtoc > li {
+	width: 58%;
 	margin: 25px 0 25px 0;
 }
 
 nav > ul > li:hover,
-ol.toc > li:hover {
+ol.toc > li:hover,
+ol.subtoc > li:hover {
 	background-color: #fae1dfff;
 }
 
 nav > ul > li > a,
-ol.toc > li > a {
+ol.toc > li > a,
+li.lh > a,
+ol.subtoc > li > a {
   	color: #0d1f2dff;
   	text-decoration: none;
   	font-weight: bold;
