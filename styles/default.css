@@ -6,31 +6,32 @@ body{
 	background-color: #546a7bff;
 	min-width: 480px;
 	max-width: 1440px;
-	text-align: center;
-	margin: 0px auto;
   	font-size: 125%;
+	margin: 0 25px 0 25px;
 }
 
 div.feature{
-  	text-align: left;
 	line-height: 2;
 }
 
 h1{
 	font-family: Constantia, serif;
 	border-radius: 5px;
+	text-align: center;
 }
 
 h2{
 	color: #e4c3adff;
+	text-align: center;
 }
 
 h3 {
 	background-color: #0d1f2dff;
 	border-radius: 5px;
+	text-align: center;
 }
 
-hr.horiz {
+hr {
 	border: 3px dotted #9ea3b0ff;
 }
 
@@ -46,6 +47,7 @@ nav > ul {
 	list-style-type: none;
 	display: flex;
 	padding: 0;
+	text-align: center;
 }
 
 ol.toc {
@@ -103,6 +105,7 @@ div.gallery {
 div.gallery > figure {
 	width: 100%;
 	height: auto;
+	margin-left: 10%;
 }
 
 div.gallery > figure > img {
@@ -111,6 +114,7 @@ div.gallery > figure > img {
 
 div.gallery > p {
 	width: 50%;
+	margin-left: 5%;
 }
 
 /** color scheme swatches **/
@@ -118,10 +122,12 @@ div.dots {
 	color: white;
 	text-shadow: 1px 1px 2px black;
 	vertical-align: center;
+	margin-left: 5%;
 }
 
 span > label {
   	vertical-align: -55px;
+	margin-left: 25%;
 }
 
 span.blackdot,
@@ -134,7 +140,7 @@ span.desertdot {
 	border: 5px solid white;
 	border-radius: 50%;
 	display: inline-block;
-	margin: 0px 3% 0px 3%;
+	margin: 0 3% 0 3%;
 }
 
 .blackdot {
@@ -193,6 +199,7 @@ div.cp_outputs {
 footer {
  	display: block;
 	margin-bottom: 40px;
+	text-align: center;
 }
 
 div.validate > a { 
