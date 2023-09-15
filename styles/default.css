@@ -100,34 +100,29 @@ ol.subtoc > li > a {
 /** flex galleries **/
 div.gallery {
 	display: flex;
-}
-
-div.gallery > figure {
-	width: 100%;
-	height: auto;
-	margin-left: 10%;
+	justify-content: center;
 }
 
 div.gallery > figure > img {
 	border-radius: 45px;
 }
 
-div.gallery > p {
-	width: 50%;
-	margin-left: 5%;
+figcaption {
+	text-align: center;
 }
 
 /** color scheme swatches **/
 div.dots {
-	color: white;
-	text-shadow: 1px 1px 2px black;
-	vertical-align: center;
-	margin-left: 5%;
+	display: flex;
+	justify-content: center;
 }
 
 span > label {
+	color: #0d1f2dff;
+	box-shadow: 0 0 5px white;
   	vertical-align: -55px;
 	margin-left: 25%;
+	background-color: rgba(255,255,0255,40%);
 }
 
 span.blackdot,
@@ -166,6 +161,10 @@ span.desertdot {
 /* font gallery */
 .font1 {
 	font-family: Constantia, serif;
+}
+
+.fonts {
+	margin: 0 5%;
 }
 
 /* console code play */
