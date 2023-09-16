@@ -2,12 +2,12 @@
 
 body{
 	font-family: Corbel, sans-serif;
-	color: #fae1dfff;	
-	background-color: #546a7bff;
+	color: #fae1df;	
+	background-color: #546a7b;
 	min-width: 480px;
 	max-width: 1440px;
   	font-size: 125%;
-	margin: 0 25px 0 25px;
+	margin: 0 25px;
 }
 
 div.feature{
@@ -16,30 +16,27 @@ div.feature{
 
 h1{
 	font-family: Constantia, serif;
-	border-radius: 5px;
 	text-align: center;
 }
 
 h2{
-	color: #e4c3adff;
+	color: #e4c3ad;
 	text-align: center;
 }
 
 h3 {
-	background-color: #0d1f2dff;
+	background-color: rgba(13, 31, 45, 0.75);
 	border-radius: 5px;
 	text-align: center;
 }
 
 hr {
-	border: 3px dotted #9ea3b0ff;
+	border: 3px dotted #9ea3b0;
 }
 
-/**stubborn anchor tags**/
-.feature > p > a,
-li.web115 > a, 
-a.figCaption {
-  	color: #e4c3adff;
+/**main link style**/
+.tanLink {
+  	color: #e4c3ad;
 }
 
 /*navigation bars and TOC*/
@@ -54,13 +51,15 @@ ol.toc {
 	padding-left: 27%;
 }
 
-nav > ul > li, 
-ol.toc > li,
-ol.subtoc > li {
-	background-color: #e4c3adff;
-	border: 5px solid #0d1f2dff;
+.navButton {
+	background-color: rgba(228, 195, 173, 0.75);
+	border: 5px solid #0d1f2d;
 	border-radius: 15px;
 	padding: 10px;
+}
+
+.navButton:hover {
+	background-color: #fae1df;
 }
 
 nav > ul > li {
@@ -69,25 +68,16 @@ nav > ul > li {
 
 ol.toc > li {
 	width: 60%;
-	margin: 25px 0 25px 0;
+	margin: 25px 0;
 }
 
 ol.subtoc > li {
 	width: 58%;
-	margin: 25px 0 25px 0;
+	margin: 25px 0;
 }
 
-nav > ul > li:hover,
-ol.toc > li:hover,
-ol.subtoc > li:hover {
-	background-color: #fae1dfff;
-}
-
-nav > ul > li > a,
-ol.toc > li > a,
-li.lh > a,
-ol.subtoc > li > a {
-  	color: #0d1f2dff;
+.navLink {
+  	color: #0d1f2d;
   	text-decoration: none;
   	font-weight: bold;
 }
@@ -118,7 +108,7 @@ div.dots {
 }
 
 span > label {
-	color: #0d1f2dff;
+	color: #0d1f2d;
 	box-shadow: 0 0 5px white;
   	vertical-align: -55px;
 	margin-left: 25%;
@@ -139,23 +129,23 @@ span.desertdot {
 }
 
 .blackdot {
-	background-color: #0d1f2dff;
+	background-color: #0d1f2d;
 }
 
 .grey1dot{
-	background-color: #546a7bff;
+	background-color: #546a7b;
 }
 
 .grey2dot{
-	background-color: #9ea3b0ff;  
+	background-color: #9ea3b0;  
 }
 
 .pinkdot{
-	background-color: #fae1dfff;
+	background-color: #fae1df;
 }
 
 .desertdot{
-	background-color: #e4c3adff; 
+	background-color: #e4c3ad; 
 }
 
 /* font gallery */
@@ -164,7 +154,7 @@ span.desertdot {
 }
 
 .fonts {
-	margin: 0 5%;
+	margin: 0 10%;
 }
 
 /* console code play */
@@ -174,9 +164,9 @@ ol.codeplay {
 
 pre.cp_inputs,
 pre.cp_inputs_wrap {
-	color: #0d1f2dff; 
-	background-color: #fae1dfff; 
-	padding: 0 0 0 20px;
+	color: #0d1f2d; 
+	background-color: #fae1df; 
+	padding-left: 20px;
 	margin-bottom: 0;
 }
 
@@ -186,9 +176,9 @@ pre.cp_inputs_wrap {
 }
 
 div.cp_outputs {
-	color: #fae1dfff; 
-	background-color:#0d1f2dff;
-	border: 1px solid #fae1dfff;
+	color: #fae1df; 
+	background-color:#0d1f2d;
+	border: 1px solid #fae1df;
 	text-indent: 15%;
 	padding-top: 0;
 	margin-bottom: 40px
@@ -202,17 +192,17 @@ footer {
 }
 
 div.validate > a { 
-  	color: #0d1f2dff;
-	background-color: #9ea3b0ff;
+  	color: #0d1f2d;
+	background-color: #9ea3b0;
 	text-decoration: none;
   	font-weight: bolder;
-	border: 3px solid #0d1f2dff;
+	border: 3px solid #0d1f2d;
 	border-radius: 15px;
-	padding: 5px 40px 5px 40px;
-  	margin: 0 75px 0 75px;
+	padding: 5px 40px;
+  	margin: 0 75px;
 }
 
 div.validate > a:hover {
-	background-color: #fae1dfff;
+	background-color: #fae1df;
 }
 
