@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Ben Ferrell's Bleak Fenrir | WEB115 | FizzBuzz 0</title>
 	<link rel = "stylesheet" type = "text/css" href = "styles/default.css">
+    <script src="scripts/fizzbuzz0.js" defer></script>
 </head>
 
 <body>
@@ -14,14 +15,24 @@
 
         <form>
             <fieldset id="user">
-                <legend>VIP Registration</legend>
-                <label for="fName">First Name:</label>
-                <input id="firstName" type="text" name="fName" placeholder="enter your first name here">
-                <label for="lName">Last Name:</label>
-                <input id="lastName" type="text" name="lName" placeholder="enter your last name here">
-                <label for="mI">Middle Initial:</label>
-                <input id="middleInitial" type="text" name="mI" placeholder="enter your middle initial here">
-                <input class="button" type="submit" value="Sign Up">
+                <legend>Test Flight Registration</legend>
+                <div>
+                    <label for="firstName">First Name*</label>
+                    <input id="firstName" type="text" size="50" autofocus required>
+                </div>
+                <div>    
+                    <label for="middleInitial">Middle Initial</label>
+                    <input id="middleInitial" type="text" size="3" maxlength="1"><br>
+                </div>
+                <div>
+                    <label for="lastName">Last Name*</label>
+                    <input id="lastName" type="text" size="50" required>
+                </div>
+                <p>*required</p>
+                <div>
+                    <input class="formButton" id="clear" type="reset" value="Clear">
+                    <input class="formButton" id="send" type="submit" value="Sign Up">
+                </div>
             </fieldset>    
         </form>
     </main>
