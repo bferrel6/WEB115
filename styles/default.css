@@ -185,6 +185,8 @@ input{
 	margin: 25px;
 	font-size: 1.15em;
 	height: 115%;
+	color: #0d1f2d;
+	background-color: #9ea3b0;
 }
 
 .formButton {
@@ -194,6 +196,10 @@ input{
 	background-color: #fae1df;
 	border: 5px solid #0d1f2d;
 	border-radius: 15px;
+}
+
+.formButton:hover {
+	background-color: #fae1df80;
 }
 
 .formButton:active {
