@@ -24,7 +24,7 @@ document.getElementById('send').onclick = function welcome() {
 };
 
 function textFloodLoop() { 
-    
+
     /* define and insert new element*/
     const newText = document.createElement('ol');
     newText.classList.add('loopText');
@@ -50,7 +50,7 @@ function textFloodLoop() {
 document.getElementById('clear').onclick = function resetPage() {
 
     /*delete loop text, clear form and reset header*/
-    document.getElementById('greeting').innerHTML = 'Welcome to <em>Veloniti</em>&trade;'; 
+    document.getElementById('greeting').innerHTML = 'Welcome, Future <em>Veloniti</em>&trade; Pilot'; 
     document.getElementById('loopFlood').remove();
     document.getElementById('user').reset();
     
