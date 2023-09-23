@@ -6,14 +6,15 @@ document.getElementById('send').onclick = function welcome() {
         middleInitial: document.getElementById('middleInitial').value,
         last: document.getElementById('lastName').value
     };
+    const greetingBase = "Welcome to <em>Veloniti</em>&trade;,"
 
     /* show alert and update greeting*/
     if (userName.middleInitial !== '') {
         alert(`Welcome, ${userName.first} ${userName.middleInitial}. ${userName.last}!`)
-        greetingBanner = `Welcome to <em>Veloniti</em>&trade;, ${userName.first} ${userName.middleInitial}. ${userName.last}!`
+        greetingBanner = `${greetingBase} ${userName.first} ${userName.middleInitial}. ${userName.last}!`
     } else {
         alert(`Welcome, ${userName.first} ${userName.last}!`)
-        greetingBanner = `Welcome to <em>Veloniti</em>&trade;, ${userName.first} ${userName.last}!`
+        greetingBanner = `${greetingBase} ${userName.first} ${userName.last}!`
     };
     document.getElementById('greeting').innerHTML = greetingBanner; 
 
@@ -33,14 +34,15 @@ function textFloodLoop() {
     const banner = document.getElementById('greeting');
     banner.insertAdjacentElement('afterend', floodList);
 
-    /* loop to fill element */
-    let firstName = document.getElementById('firstName').value;
-    let limit = prompt(`How many star systems have you visited, ${firstName}?`)
+    /* loop to fill element with new items*/
+    // let firstName = document.getElementById('firstName').value;
+    // let limit = prompt(`How many star systems have you visited, ${firstName}?`)
     let textFlood = null;
-    for (let i = 0; i < limit; i++) {
+    // let brandText = '&#9733; SAIL THE STARS &#9733;'
+    for (let i = 0; i < 140; i++) {
         const floodItem = document.createElement('li');
-        let oddity = (i % 2 == 0) ? 'the number is odd' : 'the number is even'
-        textFlood = `&#9733; SAIL THE STARS &#9733; ${oddity}`
+        // let oddity = (i % 2 == 0) ? 'the number is odd' : 'the number is even'
+        textFlood = `STARS`
         floodItem.innerHTML = textFlood;
         floodList.append(floodItem);
     }; 
