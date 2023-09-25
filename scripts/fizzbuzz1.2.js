@@ -41,7 +41,7 @@ function textFloodLoop() {
         const floodItem = document.createElement('li');
         let divisibleBy3 = ((i + 1) % 3 == 0) ? 'ROCKET' : '';
         let divisibleBy5 = ((i + 1) % 5 == 0) ? 'LAUNCH' : '';
-        textFlood = divisibleBy3 + ' ' + divisibleBy5;
+        textFlood = (divisibleBy3 == false && divisibleBy5 == false) ? 'STARS' : divisibleBy3 + ' ' + divisibleBy5;
         floodItem.innerHTML = textFlood;
         floodList.append(floodItem);
     };
