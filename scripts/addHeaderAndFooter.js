@@ -17,7 +17,7 @@ function addHeader() {
     nav.append(navList)
 
     // add navigation links
-    const headerNavList = `
+    const navListItems = `
         <li class="navButton"><a class="navLink" href="index.html">home</a></li>
         <li class="navButton"><a class="navLink" href="introduction.html">introduction</a></li>
         <li class="navButton"><a class="navLink" href="contract.html">contract</a></li>
@@ -25,12 +25,12 @@ function addHeader() {
         <li class="navButton"><a class="navLink" href="ccp.html">code play</a></li>
         <li class="navButton"><a class="navLink" href="fizzbuzz0.html">fizzbuzz</a></li>
     `
-    navList.innerHTML = headerNavList
+    navList.innerHTML = navListItems
 
     // add hr line
     const line = document.createElement('hr')
     header.append(line)
-};
+}
 
 function addSubHead() {
     // add subheader at top of main only to fizzbuzz pages
@@ -46,11 +46,12 @@ function addSubHead() {
         nav.append(navList)
 
         // add navigation links
-        const fizzbuzzList = `
+        const navListItems = `
             <li class="navButton"><a class="navLink" href="fizzbuzz0.html">fizzbuzz 0</a></li>
             <li class="navButton"><a class="navLink" href="fizzbuzz1.html">fizzbuzz 1</a></li>
+            <li class="navButton"><a class="navLink" href="fizzbuzz2.html">fizzbuzz 2</a></li>
         `
-        navList.innerHTML = fizzbuzzList
+        navList.innerHTML = navListItems
     }
 }
 
@@ -72,7 +73,7 @@ function addFooter() {
     nav.append(navList)
 
     // add navigation links
-    const footerNavList = `
+    const navListItems = `
             <li class="navButton"><a class="navLink" href="https://github.com/bferrel6">github</a></li>
             <li class="navButton"><a class="navLink" href="https://bferrel6.github.io">github.io</a></li>
             <li class="navButton"><a class="navLink" href="https://bferrel6.github.io/web115">WEB115.io </a></li>
@@ -81,7 +82,7 @@ function addFooter() {
             <li class="navButton"><a class="navLink" href="https://jsfiddle.net/user/bferrel6/fiddles/">jsfiddle</a></li>
             <li class="navButton"><a class="navLink" href="https://www.linkedin.com/in/benjamin-ferrell-7361301a6">LinkedIn</a></li>
         `
-    navList.innerHTML = footerNavList
+    navList.innerHTML = navListItems
 
     // add signature
     const sigContent = `Designed by <strong>&copy;Mithril WebForge</strong> - <em>Renowned Across the Multiverse</em>`
