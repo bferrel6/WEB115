@@ -29,9 +29,17 @@ h2{
 	text-align: center;
 }
 
+hr {
+	border: 3px dotted var(--light-gray);
+	margin: 2.5% auto;
+}
+
+
 #app{
 	border: 2px solid var(--dark-blue);
 	margin: 15px auto;
+	padding: 25px 45px;
+	font-size: 14pt;
 }
 
 /*navigation bars*/
@@ -53,4 +61,26 @@ nav a {
 
 nav a:hover {
 	background-color: var(--pink);
+}
+
+/*footer and validation links*/
+footer {
+	display: block;
+   margin-bottom: 40px;
+   text-align: center;
+}
+
+.validate a { 
+	 color: var(--dark-blue);
+   background-color: var(--light-gray);
+   text-decoration: none;
+	 font-weight: bolder;
+   border: 3px solid var(--dark-blue);
+   border-radius: 15px;
+   padding: 5px 40px;
+	 margin: 0 75px;
+}
+
+.validate a:hover {
+   background-color: var(--pink);
 }
