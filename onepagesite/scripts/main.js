@@ -16,8 +16,8 @@ function getContent(fragmentId, callback) {
 function loadContent() {
 
     var contentDiv = document.getElementById("app");
-    fragmentId = location.hash.slice(1);
-
+    fragmentId = location.hash.slice(1); // remove the # from the location hash to match the page name
+    
     getContent(fragmentId, function(content) {
         contentDiv.innerHTML = content;
     });
