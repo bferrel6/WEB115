@@ -1,25 +1,39 @@
+// generate navigation bar using 3 arguments
+function navBar(nav, linkNames, linkHREFs) {
+    for (let i = 0; i < linkNames.length; i++) {
+        let link = document.createElement('a')
+        link.innerHTML = linkNames[i]
+        link.href = linkHREFs[i]
+        nav.append(link)
+    }
+}
+
 function addHeader() {
     // create header element at top of body
     const header = document.createElement('header')
     document.body.prepend(header)
 
-    // add title h1
-    const title = document.createElement('h1')
-    title.innerHTML = "Ben Ferrell's Bleak Fenrir | WEB115"
-    header.append(title)
+    // add standard heading
+    const h1 = document.createElement('h1')
+    const name = "Ben Ferrell"
+    const mascot = "Bleak Fenrir"
+    const course = "WEB115"
+    h1.innerHTML = `${name}'s ${mascot} | ${course}`
+    header.append(h1)
 
     // add nav container
     const nav = document.createElement('nav')
     header.append(nav)
 
     // add navigation links
-    const navLinks = [
+    const navLinkNames = [
         'home',
         'introduction',
         'contract',
         'brand',
         'code play',
-        'fizzbuzz'
+        'fizzbuzz',
+        'one page site'
     ];
     
     const navLinkHREFs = [
@@ -28,15 +42,11 @@ function addHeader() {
         'contract.html',
         'brand.html',
         'ccp.html',
-        'fizzbuzz0.html'
+        'fizzbuzz0.html',
+        'onepagesite/index.html'
     ];
 
-    for (let i = 0; i < navLinks.length; i++) {
-        let link = document.createElement('a')
-        link.innerHTML = navLinks[i]
-        link.href = navLinkHREFs[i]
-        nav.append(link)
-    }
+    navBar(nav, navLinkNames, navLinkHREFs)
 
     // add hr line
     const line = document.createElement('hr')
@@ -53,24 +63,21 @@ function addSubHead() {
         main.prepend(nav)
 
         // add navigation links
-        const navLinks = [
+        const navLinkNames = [
             'fizzbuzz 0',
             'fizzbuzz 1',
-            'fizzbuzz 2'
+            'fizzbuzz 2',
+            'fizzbuzz 3'
         ];
 
         const navLinkHREFs = [
             'fizzbuzz0.html',
             'fizzbuzz1.html',
-            'fizzbuzz2.html'
+            'fizzbuzz2.html',
+            'fizzbuzz3.html'
         ];
 
-        for (let i = 0; i < navLinks.length; i++) {
-            let link = document.createElement('a')
-            link.innerHTML = navLinks[i]
-            link.href = navLinkHREFs[i]
-            nav.append(link)
-        }
+        navBar(nav, navLinkNames, navLinkHREFs)
     }
 }
 
@@ -88,7 +95,7 @@ function addFooter() {
     footer.append(nav)
 
     // add navigation links
-    const navLinks = [
+    const navLinkNames = [
         'github',
         'github.io',
         'WEB115.io',
@@ -108,12 +115,7 @@ function addFooter() {
         'https://www.linkedin.com/in/benjamin-ferrell-7361301a6'
     ];
     
-    for (let i = 0; i < navLinks.length; i++) {
-        let link = document.createElement('a')
-        link.innerHTML = navLinks[i]
-        link.href = navLinkHREFs[i]
-        nav.append(link)
-    }
+    navBar(nav, navLinkNames, navLinkHREFs)
 
     // add signature
     const sigContent = `Designed by <strong>&copy;Mithril WebForge</strong> - <em>Renowned Across the Multiverse</em>`

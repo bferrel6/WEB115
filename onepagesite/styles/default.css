@@ -15,7 +15,7 @@ body{
 	color: var(--pink);	
 	background-color: var(--medium-gray);
 	min-width: 480px;
-	max-width: 1440px;
+	max-width: 1080px;
 	margin: 0 25px;
 }
 
@@ -42,14 +42,14 @@ hr {
 	font-size: 14pt;
 }
 
-/*navigation bars*/
+/* navigation bars */
 nav{
 	display: flex;
 	text-align: center;
 }
 
 nav a {
-	background-color: #e4c3ad75;
+	background-color: #e4c3ad90;
 	border: 5px solid var(--dark-blue);
 	border-radius: 15px;
 	padding: 10px;
@@ -63,7 +63,7 @@ nav a:hover {
 	background-color: var(--pink);
 }
 
-/*footer and validation links*/
+/* footer and validation links */
 footer {
 	display: block;
    margin-bottom: 40px;
