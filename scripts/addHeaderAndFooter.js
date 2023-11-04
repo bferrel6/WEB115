@@ -12,20 +12,31 @@ function addHeader() {
     const nav = document.createElement('nav')
     header.append(nav)
 
-    // add unordered list inside nav
-    const navList = document.createElement('ul')
-    nav.append(navList)
-
     // add navigation links
-    const navListItems = `
-        <li class="navButton"><a class="navLink" href="index.html">home</a></li>
-        <li class="navButton"><a class="navLink" href="introduction.html">introduction</a></li>
-        <li class="navButton"><a class="navLink" href="contract.html">contract</a></li>
-        <li class="navButton"><a class="navLink" href="brand.html">brand</a></li>
-        <li class="navButton"><a class="navLink" href="ccp.html">code play</a></li>
-        <li class="navButton"><a class="navLink" href="fizzbuzz0.html">fizzbuzz</a></li>
-    `
-    navList.innerHTML = navListItems
+    const navLinks = [
+        'home',
+        'introduction',
+        'contract',
+        'brand',
+        'code play',
+        'fizzbuzz'
+    ];
+    
+    const navLinkHREFs = [
+        'index.html',
+        'introduction.html',
+        'contract.html',
+        'brand.html',
+        'ccp.html',
+        'fizzbuzz0.html'
+    ];
+
+    for (let i = 0; i < navLinks.length; i++) {
+        let link = document.createElement('a')
+        link.innerHTML = navLinks[i]
+        link.href = navLinkHREFs[i]
+        nav.append(link)
+    }
 
     // add hr line
     const line = document.createElement('hr')
@@ -41,17 +52,25 @@ function addSubHead() {
         const nav = document.createElement('nav')
         main.prepend(nav)
 
-        // add unordered list inside nav
-        const navList = document.createElement('ul')
-        nav.append(navList)
-
         // add navigation links
-        const navListItems = `
-            <li class="navButton"><a class="navLink" href="fizzbuzz0.html">fizzbuzz 0</a></li>
-            <li class="navButton"><a class="navLink" href="fizzbuzz1.html">fizzbuzz 1</a></li>
-            <li class="navButton"><a class="navLink" href="fizzbuzz2.html">fizzbuzz 2</a></li>
-        `
-        navList.innerHTML = navListItems
+        const navLinks = [
+            'fizzbuzz 0',
+            'fizzbuzz 1',
+            'fizzbuzz 2'
+        ];
+
+        const navLinkHREFs = [
+            'fizzbuzz0.html',
+            'fizzbuzz1.html',
+            'fizzbuzz2.html'
+        ];
+
+        for (let i = 0; i < navLinks.length; i++) {
+            let link = document.createElement('a')
+            link.innerHTML = navLinks[i]
+            link.href = navLinkHREFs[i]
+            nav.append(link)
+        }
     }
 }
 
@@ -68,21 +87,33 @@ function addFooter() {
     const nav = document.createElement('nav')
     footer.append(nav)
 
-    // add unordered list inside nav
-    const navList = document.createElement('ul')
-    nav.append(navList)
-
     // add navigation links
-    const navListItems = `
-            <li class="navButton"><a class="navLink" href="https://github.com/bferrel6">github</a></li>
-            <li class="navButton"><a class="navLink" href="https://bferrel6.github.io">github.io</a></li>
-            <li class="navButton"><a class="navLink" href="https://bferrel6.github.io/web115">WEB115.io </a></li>
-            <li class="navButton"><a class="navLink" href="https://www.freecodecamp.org/bferrel6">freecodecamp </a></li>
-            <li class="navButton"><a class="navLink" href="https://www.codecademy.com/profiles/bferrel6">codecademy</a></li>
-            <li class="navButton"><a class="navLink" href="https://jsfiddle.net/user/bferrel6/fiddles/">jsfiddle</a></li>
-            <li class="navButton"><a class="navLink" href="https://www.linkedin.com/in/benjamin-ferrell-7361301a6">LinkedIn</a></li>
-        `
-    navList.innerHTML = navListItems
+    const navLinks = [
+        'github',
+        'github.io',
+        'WEB115.io',
+        'freeCodeCamp',
+        'codecademy',
+        'jsfiddle',
+        'linkedIn'
+    ];
+
+    const navLinkHREFs = [
+        'https://github.com/bferrel6',
+        'https://bferrel6.github.io',
+        'https://bferrel6.github.io/web115',
+        'https://www.freecodecamp.org/bferrel6',
+        'https://www.codecademy.com/profiles/bferrel6',
+        'https://jsfiddle.net/user/bferrel6/fiddles/',
+        'https://www.linkedin.com/in/benjamin-ferrell-7361301a6'
+    ];
+    
+    for (let i = 0; i < navLinks.length; i++) {
+        let link = document.createElement('a')
+        link.innerHTML = navLinks[i]
+        link.href = navLinkHREFs[i]
+        nav.append(link)
+    }
 
     // add signature
     const sigContent = `Designed by <strong>&copy;Mithril WebForge</strong> - <em>Renowned Across the Multiverse</em>`
