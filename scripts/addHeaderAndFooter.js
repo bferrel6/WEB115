@@ -42,7 +42,7 @@ function addHeader() {
         'contract.html',
         'brand.html',
         'ccp.html',
-        'fizzbuzz0.html',
+        'fizzbuzz4.html',
         'onepagesite/index.html'
     ];
 
