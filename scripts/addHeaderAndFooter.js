@@ -67,14 +67,16 @@ function addSubHead() {
             'fizzbuzz 0',
             'fizzbuzz 1',
             'fizzbuzz 2',
-            'fizzbuzz 3'
+            'fizzbuzz 3',
+            'fizzbuzz 4'
         ];
 
         const navLinkHREFs = [
             'fizzbuzz0.html',
             'fizzbuzz1.html',
             'fizzbuzz2.html',
-            'fizzbuzz3.html'
+            'fizzbuzz3.html',
+            'fizzbuzz4.html'
         ];
 
         navBar(nav, navLinkNames, navLinkHREFs)

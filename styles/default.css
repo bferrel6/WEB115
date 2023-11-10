@@ -168,18 +168,35 @@ div.cp_outputs {
 }
 
 /*fizzbuzz forms*/
-input{
-	margin: 25px;
-	font-size: 1.15em;
+fieldset {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+fieldset div {
 	height: 115%;
-	color: var(--dark-blue);
-	background-color: var(--light-gray);
+}
+
+fieldset p {
+	display: inline-block;
+	font-size: 1em;
 }
 
 fieldset label{
 	display: inline-block;
 	text-align: right;
 	width: 120px;
+}
+
+input{
+	margin: 25px;
+	font-size: 1.15em;
+	color: var(--dark-blue);
+	background-color: var(--light-gray);
+}
+
+#controls div{
+	width: 50%;
 }
 
 .formButton {
