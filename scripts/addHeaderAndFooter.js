@@ -21,33 +21,27 @@ function addHeader() {
     h1.innerHTML = `${name}'s ${mascot} | ${course}`;
     header.append(h1);
 
-    // add logo banner, subtitle, and slogan
-    const logoBanner = document.createElement('h2');
-    
-    const logoLink = document.createElement('a');
-    logoLink.href = 'index.html';
-    const logo = new Image();
-    logo.src = 'images/veloniti_wing_light.png';
-    logoLink.appendChild(logo);
-
-    const subtitle = document.createElement('div');
-    subtitle.innerHTML = '&trade; &nbsp; ROCKET COACH';
-    logoLink.append(subtitle);
-    logoBanner.append(logoLink);
-    header.append(logoBanner);
-
-    const slogan = document.createElement('h3');
-    slogan.innerHTML = '<em>Sail the Stars in Style</em>';
-    slogan.classList.add('serifFont');
-    header.append(slogan);
+    // add banner with slogan
+    const sloganBanner = document.createElement('h3');
+    sloganBanner.innerHTML = '<em>Sail the Stars in Style</em>';
+    sloganBanner.classList.add('serifFont');
+    header.append(sloganBanner);
 
     // add nav container
     const nav = document.createElement('nav');
     header.append(nav);
 
+    // add first link as a logo
+    const logoLink = document.createElement('a');
+    logoLink.href = 'index.html';
+    logoLink.classList.add('logo');
+    const logo = new Image();
+    logo.src = 'images/v_nav_logo.png';
+    logoLink.appendChild(logo);
+    nav.appendChild(logoLink);
+
     // add navigation links
     const navLinkNames = [
-        'home',
         'introduction',
         'contract',
         'brand',
@@ -57,7 +51,6 @@ function addHeader() {
     ];
     
     const navLinkHREFs = [
-        'index.html',
         'introduction.html',
         'contract.html',
         'brand.html',
@@ -78,6 +71,10 @@ function addSubHead() {
     if (document.getElementById('buzz')) { 
         const main = document.getElementById('buzz')
         
+        // add hr line
+        const line = document.createElement('hr');
+        main.prepend(line);
+
         // add nav container
         const nav = document.createElement('nav')
         main.prepend(nav)
