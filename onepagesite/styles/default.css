@@ -29,17 +29,45 @@ h2{
 	text-align: center;
 }
 
+h3 {
+	text-align: center;
+	font-size: 1.5em;
+}
+
 hr {
-	border: 3px dotted var(--light-gray);
+	border: 3px dotted var(--dark-blue);
 	margin: 2.5% auto;
 }
 
+a {
+	color: var(--tan);
+}
 
 #app{
 	border: 2px solid var(--dark-blue);
 	margin: 15px auto;
 	padding: 25px 45px;
 	font-size: 14pt;
+}
+
+/* banner styles */
+
+header h2 {
+	display: flex;
+	justify-content: center;
+}
+
+h2 a {
+	display: flex;
+	text-decoration: none;
+}
+
+a div {
+	padding-top: 7.5%;
+}
+
+.serifFont {
+	font-family: Constantia, serif;
 }
 
 /* navigation bars */

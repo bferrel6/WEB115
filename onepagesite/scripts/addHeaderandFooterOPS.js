@@ -1,14 +1,16 @@
 // generate navigation bar using 3 arguments
 function navBar(nav, linkNames, linkHREFs) {
     for (let i = 0; i < linkNames.length; i++) {
-        let link = document.createElement('a');
-        link.innerHTML = linkNames[i];
-        link.href = linkHREFs[i];
-        nav.append(link);
+        let link = document.createElement('a')
+        link.innerHTML = linkNames[i]
+        link.href = linkHREFs[i]
+        nav.append(link)
     }
-}
+};
 
-function addHeader() {
+// one page site version of header
+
+function addHeaderOPS() {
     // create header element at top of body
     const header = document.createElement('header');
     document.body.prepend(header);
@@ -25,7 +27,7 @@ function addHeader() {
     const logoBanner = document.createElement('h2');
     
     const logoLink = document.createElement('a');
-    logoLink.href = 'index.html';
+    logoLink.href = '../index.html'; // link to index of root folder
     const logo = new Image();
     logo.src = 'images/veloniti_wing_light.png';
     logoLink.appendChild(logo);
@@ -51,56 +53,18 @@ function addHeader() {
         'introduction',
         'contract',
         'brand',
-        'code play',
-        'fizzbuzz',
-        'one page site'
+        'contact'
     ];
-    
+
     const navLinkHREFs = [
-        'index.html',
-        'introduction.html',
-        'contract.html',
-        'brand.html',
-        'ccp.html',
-        'fizzbuzz4.html',
-        'onepagesite/index.html'
+        '#home',
+        '#intro',
+        '#contract',
+        '#brand',
+        '#contact'
     ];
 
     navBar(nav, navLinkNames, navLinkHREFs);
-
-    // add hr line
-    const line = document.createElement('hr');
-    header.append(line);
-}
-
-function addSubHead() {
-    // add subheader at top of main only to fizzbuzz pages
-    if (document.getElementById('buzz')) { 
-        const main = document.getElementById('buzz')
-        
-        // add nav container
-        const nav = document.createElement('nav')
-        main.prepend(nav)
-
-        // add navigation links
-        const navLinkNames = [
-            'fizzbuzz 0',
-            'fizzbuzz 1',
-            'fizzbuzz 2',
-            'fizzbuzz 3',
-            'fizzbuzz 4'
-        ];
-
-        const navLinkHREFs = [
-            'fizzbuzz0.html',
-            'fizzbuzz1.html',
-            'fizzbuzz2.html',
-            'fizzbuzz3.html',
-            'fizzbuzz4.html'
-        ];
-
-        navBar(nav, navLinkNames, navLinkHREFs);
-    }
 }
 
 function addFooter() {
@@ -161,6 +125,5 @@ function addFooter() {
 }
 
 window.onload = 
-    addHeader();
-    addSubHead(); 
+    addHeaderOPS();
     addFooter();
