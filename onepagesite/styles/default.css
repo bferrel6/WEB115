@@ -104,15 +104,15 @@ footer {
 }
 
 .validate a { 
-	 color: var(--dark-blue);
-   background-color: var(--light-gray);
-   text-decoration: none;
-	 font-weight: bolder;
-   border: 3px solid var(--dark-blue);
-   border-radius: 15px;
-   padding: 5px 40px;
-	 margin: 0 75px;
+  	color: var(--dark-blue);
+	background-color: var(--light-gray);
+	text-decoration: none;
+  	font-weight: bolder;
+	border: 1px solid var(--dark-blue);
+	padding: 5px 40px;
+  	margin: 0 25px;
 }
+
 
 .validate a:hover {
    background-color: var(--pink);
