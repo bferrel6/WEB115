@@ -99,8 +99,9 @@ nav a {
 	padding-top: 0px;
 }
 
-nav a:hover {
-	background-color: #0d1f2d90;
+nav a:hover,
+.logo:hover {
+	opacity: 0.8;
 }
 
 /** image sidebars**/
