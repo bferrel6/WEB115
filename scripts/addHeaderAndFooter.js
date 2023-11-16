@@ -60,9 +60,11 @@ function addHeader() {
 
     navBar(nav, navLinkNames, navLinkHREFs);
 
-    // add hr line
-    const line = document.createElement('hr');
-    header.append(line);
+    // add hr line on non-fizzbuzz pages
+    if (!(document.getElementById('buzz'))) {
+        const line = document.createElement('hr');
+        header.append(line);
+    }
 }
 
 function addSubHead() {
