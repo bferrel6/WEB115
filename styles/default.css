@@ -38,12 +38,13 @@ h1 {
 	margin-bottom: 5px;
 }
 
-h2 {
+h2, h4 {
 	color: var(--tan);
 	text-align: center;
 }
 
 h3 {
+	font-family: Constantia, serif;
 	text-align: center;
 	font-size: 1.5em;
 }
@@ -68,17 +69,8 @@ header h2 {
 	justify-content: center;
 }
 
-h2 a {
-	display: flex;
-	text-decoration: none;
-}
-
-a div {
-	padding-top: 7.5%;
-}
-
 /* navigation bars */
-nav{
+nav {
 	display: flex;
 	text-align: center;
 }
@@ -230,18 +222,14 @@ input{
 	background-color: var(--light-gray);
 }
 
-#controls div{
-	width: 50%;
-}
-
 .formButton {
-	width: 25%;
+	width: 20%;
+	margin-right: 10%;
 	margin-left: 15%;
 	font-size: 1.15em;
 	color: var(--dark-blue);
 	background-color: var(--pink);
 	border: 5px solid var(--dark-blue);
-	border-radius: 15px;
 }
 
 .formButton:hover {

@@ -26,7 +26,6 @@ function addHeaderOPS() {
     // add banner with slogan
     const sloganBanner = document.createElement('h3');
     sloganBanner.innerHTML = '<em>Sail the Stars in Style</em>';
-    sloganBanner.classList.add('serifFont');
     header.append(sloganBanner);
 
     // add nav container
@@ -75,13 +74,13 @@ function addFooter() {
 
     // add navigation links
     const navLinkNames = [
-        'github',
-        'github.io',
+        'GitHub',
+        'GitHub.io',
         'WEB115.io',
         'freeCodeCamp',
-        'codecademy',
-        'jsfiddle',
-        'linkedIn'
+        'Codecademy',
+        'JSFiddle',
+        'LinkedIn'
     ];
 
     const navLinkHREFs = [
