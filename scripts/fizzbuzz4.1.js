@@ -9,8 +9,9 @@ document.getElementById('send').onclick = function welcome() {
         middleInitial: document.getElementById('middleInitial').value,
         last: document.getElementById('lastName').value
     }
-
-    const greetingBase = "Thank you for choosing <em>Veloniti</em>&trade;, ";
+    
+    const defaultGreeting = 'Prepare to Engage, New <em>Veloniti</em>&trade; Pilot'
+    const greetingBase = 'Thank you for choosing <em>Veloniti</em>&trade;';
 
     // update names to proper case
     function properName(name) {
@@ -19,15 +20,14 @@ document.getElementById('send').onclick = function welcome() {
     userName.first = properName(userName.first);
     userName.last = properName(userName.last);
 
-    // show alert and update greeting 
-    if (userName.middleInitial !== '') {
-        userName.middleInitial = properName(userName.middleInitial);
-        alert(`Welcome, ${userName.first} ${userName.middleInitial}. ${userName.last}!`);
-        greetingBanner = `${greetingBase} ${userName.first} ${userName.middleInitial}. ${userName.last}!`;
+    // update greeting based on name entered
+    if (userName.first == '' && userName.last == '') { 
+        greetingBanner = greetingBase
+    } else if (userName.middleInitial !== '') {
+        greetingBanner = `${greetingBase}, ${userName.first} ${userName.middleInitial}. ${userName.last}!`
     } else {
-        alert(`Welcome, ${userName.first} ${userName.last}!`);
-        greetingBanner = `${greetingBase} ${userName.first} ${userName.last}!`;
-    }
+        greetingBanner = `${greetingBase}, ${userName.first} ${userName.last}!`
+    };
     document.getElementById('greeting').innerHTML = greetingBanner; 
 
     // run loop function

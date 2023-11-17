@@ -1,22 +1,33 @@
 document.getElementById('send').onclick = function welcome() {
 
-    // create object for username
+    // delete prior loop text if found
+    clearFlood()
+
+    /* create object for username*/
     const userName = {
         first: document.getElementById('firstName').value,
         middleInitial: document.getElementById('middleInitial').value,
         last: document.getElementById('lastName').value
     };
-    const greetingBase = "Welcome to <em>Veloniti</em>&trade;, "
 
-    // show alert and update greeting 
-    if (userName.middleInitial !== '') {
-        alert(`Welcome, ${userName.first} ${userName.middleInitial}. ${userName.last}!`)
-        greetingBanner = `${greetingBase} ${userName.first} ${userName.middleInitial}. ${userName.last}!`
+    const greetingBase = "Welcome to <em>Veloniti</em>&trade;"
+
+    // update names to proper case
+    function properName(name) {
+    return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+    }
+    userName.first = properName(userName.first);
+    userName.last = properName(userName.last);
+
+    // update greeting based on name entered
+    if (userName.first == '' && userName.last == '') { 
+        greetingBanner = greetingBase
+    } else if (userName.middleInitial !== '') {
+        greetingBanner = `${greetingBase}, ${userName.first} ${userName.middleInitial}. ${userName.last}!`
     } else {
-        alert(`Welcome, ${userName.first} ${userName.last}!`)
-        greetingBanner = `${greetingBase} ${userName.first} ${userName.last}!`
+        greetingBanner = `${greetingBase}, ${userName.first} ${userName.last}!`
     };
-    document.getElementById('greeting').innerHTML = greetingBanner; 
+    document.getElementById('greeting').innerHTML = greetingBanner;
 
     // run loop function
     textFloodLoop();
@@ -56,12 +67,24 @@ function textFloodLoop() {
 
 document.getElementById('clear').onclick = function resetPage() {
 
-    // delete loop text, clear form and reset header
-    document.getElementById('greeting').innerHTML = 'Welcome, Future <em>Veloniti</em>&trade; Pilot'; 
-    document.getElementById('loopFlood').remove();
-    document.getElementById('user').reset();
+    // reset header
+    document.getElementById('greeting').innerHTML = 'Welcome, Future <em>Veloniti</em>&trade; Pilot';  
     
+    // clear form if not blank
+    form = document.getElementById('launch')
+    if (form) {
+        form.reset();
+    } else {return}   
+
+    clearFlood();
+
     return false;
 }
 
-// divisibleByFirst == false && divisibleBySecond == false && divisibleByThird == false
+// delete prior loop text if found
+function clearFlood() {
+    oldFlood = document.getElementById('loopFlood')
+    if (oldFlood != null) {
+        document.getElementById('loopFlood').remove();
+    } else { return }
+}
