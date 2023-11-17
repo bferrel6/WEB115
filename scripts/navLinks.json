@@ -1,0 +1,84 @@
+{
+    "headerLinks": {
+        "names": [
+            "introduction",
+            "contract",
+            "brand",
+            "code play",
+            "fizzbuzz",
+            "one page site"
+            ],
+        "hrefs": [
+            "introduction.html",
+            "contract.html",
+            "brand.html",
+            "ccp.html",
+            "fizzbuzz4.html",
+            "onepagesite/index.html"
+            ]
+    },
+    "onePageHeaderLinks": {
+        "names": [
+            "introduction",
+            "contract",
+            "brand",
+            "contact"
+        ],
+        "hrefs": [
+            "#intro",
+            "#contract",
+            "#brand",
+            "#contact"
+        ]
+    },
+    "subHeaderFBLinks": {
+        "names": [
+            "fizzbuzz 0",
+            "fizzbuzz 1",
+            "fizzbuzz 2",
+            "fizzbuzz 3",
+            "fizzbuzz 4"
+        ],
+        "hrefs": [
+            "fizzbuzz0.html",
+            "fizzbuzz1.html",
+            "fizzbuzz2.html",
+            "fizzbuzz3.html",
+            "fizzbuzz4.html"
+        ]
+    },
+    "footerLinks": {
+        "names": [
+            "GitHub",
+            "GitHub.io",
+            "WEB115.io",
+            "freeCodeCamp",
+            "CodeCademy",
+            "JSFiddle",
+            "LinkedIn"
+        ],
+        "hrefs": [
+            "https://github.com/bferrel6",
+            "https://bferrel6.github.io",
+            "https://bferrel6.github.io/web115",
+            "https://www.freecodecamp.org/bferrel6",
+            "https://www.codecademy.com/profiles/bferrel6",
+            "https://jsfiddle.net/user/bferrel6/fiddles/",
+            "https://www.linkedin.com/in/benjamin-ferrell-7361301a6"
+        ]
+    },
+    "validationLinks": {
+        "names": [
+            "Validate HTML",
+            "Validate CSS"
+        ],
+        "hrefs": [
+            "http://validator.w3.org/check?uri=referer",
+            "http://jigsaw.w3.org/css-validator/check/referer"
+        ],
+        "ids": [
+            "validation_link_html",
+            "validation_link_css"
+        ]
+    }
+}
