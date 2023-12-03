@@ -112,6 +112,7 @@ function addFooter() {
     const validationBlock = document.createElement("div");
     validationBlock.classList.add("validate");
     footer.append(validationBlock);
+    
     fetch('scripts/navLinks.json')
         .then(res => {return res.json()})
         .then(data => {
@@ -123,12 +124,11 @@ function addFooter() {
                 link.setAttribute("id", validationLinks.ids[i]);
                 validationBlock.append(link);
             }
+            // update validation links based on the current page
+            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
         })
         .catch(error => console.log(error))
-
-    // update validation links based on the current page
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
 }
 
 window.onload = 
