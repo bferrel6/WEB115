@@ -42,21 +42,13 @@ function addHeaderOPS() {
     nav.appendChild(logoLink);
 
     // add navigation links
-    const navLinkNames = [
-        "introduction",
-        "contract",
-        "brand",
-        "contact"
-    ];
-
-    const navLinkHREFs = [
-        "#intro",
-        "#contract",
-        "#brand",
-        "#contact"
-    ];
-
-    navBar(nav, navLinkNames, navLinkHREFs);
+    fetch('../scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const onePageHeaderLinks = data.onePageHeaderLinks
+            navBar(nav, onePageHeaderLinks.names, onePageHeaderLinks.hrefs);
+        })
+        .catch(error => console.log(error)) 
 }
 
 function addFooter() {
@@ -73,27 +65,13 @@ function addFooter() {
     footer.append(nav);
 
     // add navigation links
-    const navLinkNames = [
-        "GitHub",
-        "GitHub.io",
-        "WEB115.io",
-        "freeCodeCamp",
-        "Codecademy",
-        "JSFiddle",
-        "LinkedIn"
-    ];
-
-    const navLinkHREFs = [
-        "https://github.com/bferrel6",
-        "https://bferrel6.github.io",
-        "https://bferrel6.github.io/web115",
-        "https://www.freecodecamp.org/bferrel6",
-        "https://www.codecademy.com/profiles/bferrel6",
-        "https://jsfiddle.net/user/bferrel6/fiddles/",
-        "https://www.linkedin.com/in/benjamin-ferrell-7361301a6"
-    ];
-    
-    navBar(nav, navLinkNames, navLinkHREFs);
+    fetch('../scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const footerLinks = data.footerLinks
+            navBar(nav, footerLinks.names, footerLinks.hrefs);
+        })
+        .catch(error => console.log(error))
 
     // add signature
     const sigContent = `Designed by <strong>&copy;Mithril WebForge</strong> - <em>Renowned Across the Multiverse</em>`;
@@ -102,14 +80,22 @@ function addFooter() {
     footer.append(signature);
 
     // add validation block
-    const validationLinks = `
-            <a href="http://validator.w3.org/check?uri=referer" id="validation_link_html">Validate HTML</a>
-            <a href="http://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">Validate CSS</a>
-        `;
     const validationBlock = document.createElement("div");
     validationBlock.classList.add("validate");
-    validationBlock.innerHTML = validationLinks;
     footer.append(validationBlock);
+    fetch('../scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const validationLinks = data.validationLinks
+            for (let i = 0; i < validationLinks.names.length; i++) {
+                let link = document.createElement("a");
+                link.innerHTML = validationLinks.names[i];
+                link.href = validationLinks.hrefs[i];
+                link.setAttribute("id", validationLinks.ids[i]);
+                validationBlock.append(link);
+            }
+        })
+        .catch(error => console.log(error))
 
     // update validation links based on the current page
     document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);

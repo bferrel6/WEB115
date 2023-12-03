@@ -41,35 +41,13 @@ function addHeader() {
 
     // add navigation links
 
-    /*
-    fetch('scripts/navLinks.json', {method: 'GET'})
-        .then(res => res.json())
-        .then(obj => {console.log(obj.headerLinks);});
-    
-    linkSet = JSON.parse(obj);
-    console.log(linkSet);
-    */
-
-    const navLinks = {
-        names: [
-        "introduction",
-        "contract",
-        "brand",
-        "code play",
-        "fizzbuzz",
-        "one page site"
-        ],
-        hrefs: [
-        "introduction.html",
-        "contract.html",
-        "brand.html",
-        "ccp.html",
-        "fizzbuzz4.html",
-        "onepagesite/index.html"
-        ]
-    }
-
-    navBar(nav, navLinks.names, navLinks.hrefs);
+    fetch('scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const headerLinks = data.headerLinks
+            navBar(nav, headerLinks.names, headerLinks.hrefs);
+        })
+        .catch(error => console.log(error))  
 
     // add hr line on non-fizzbuzz pages
     if (!(document.getElementById("buzz"))) {
@@ -92,25 +70,13 @@ function addSubHead() {
         main.prepend(nav)
 
         // add navigation links
-
-        const navLinks = {
-            names: [
-                "fizzbuzz 0",
-                "fizzbuzz 1",
-                "fizzbuzz 2",
-                "fizzbuzz 3",
-                "fizzbuzz 4"
-            ],
-            hrefs: [
-                "fizzbuzz0.html",
-                "fizzbuzz1.html",
-                "fizzbuzz2.html",
-                "fizzbuzz3.html",
-                "fizzbuzz4.html"
-            ]
-        }
-
-        navBar(nav, navLinks.names, navLinks.hrefs);
+        fetch('scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const subHeaderFBLinks = data.subHeaderFBLinks
+            navBar(nav, subHeaderFBLinks.names, subHeaderFBLinks.hrefs);
+        })
+        .catch(error => console.log(error))
     }
 }
 
@@ -128,28 +94,13 @@ function addFooter() {
     footer.append(nav);
 
     // add navigation links
-    const navLinks = {
-        names: [
-            "GitHub",
-            "GitHub.io",
-            "WEB115.io",
-            "freeCodeCamp",
-            "Codecademy",
-            "JSFiddle",
-            "LinkedIn"
-        ],
-        hrefs: [
-            "https://github.com/bferrel6",
-            "https://bferrel6.github.io",
-            "https://bferrel6.github.io/web115",
-            "https://www.freecodecamp.org/bferrel6",
-            "https://www.codecademy.com/profiles/bferrel6",
-            "https://jsfiddle.net/user/bferrel6/fiddles/",
-            "https://www.linkedin.com/in/benjamin-ferrell-7361301a6"
-        ]
-    }
-
-    navBar(nav, navLinks.names, navLinks.hrefs);
+    fetch('scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const footerLinks = data.footerLinks
+            navBar(nav, footerLinks.names, footerLinks.hrefs);
+        })
+        .catch(error => console.log(error))  
 
     // add signature
     const sigContent = `Designed by <strong>&copy;Mithril WebForge</strong> - <em>Renowned Across the Multiverse</em>`;
@@ -158,32 +109,22 @@ function addFooter() {
     footer.append(signature);
 
     // add validation block
-    const validationLinks = {
-        names: [
-            "Validate HTML",
-            "Validate CSS"
-        ],
-        hrefs: [
-            "http://validator.w3.org/check?uri=referer",
-            "http://jigsaw.w3.org/css-validator/check/referer"
-        ],
-        ids: [
-            "validation_link_html",
-            "validation_link_css"
-        ]
-    }
-
     const validationBlock = document.createElement("div");
     validationBlock.classList.add("validate");
     footer.append(validationBlock);
-
-    for (let i = 0; i < validationLinks.names.length; i++) {
-        let link = document.createElement("a");
-        link.innerHTML = validationLinks.names[i];
-        link.href = validationLinks.hrefs[i];
-        link.setAttribute("id", validationLinks.ids[i]);
-        validationBlock.append(link);
-    }
+    fetch('scripts/navLinks.json')
+        .then(res => {return res.json()})
+        .then(data => {
+            const validationLinks = data.validationLinks
+            for (let i = 0; i < validationLinks.names.length; i++) {
+                let link = document.createElement("a");
+                link.innerHTML = validationLinks.names[i];
+                link.href = validationLinks.hrefs[i];
+                link.setAttribute("id", validationLinks.ids[i]);
+                validationBlock.append(link);
+            }
+        })
+        .catch(error => console.log(error))
 
     // update validation links based on the current page
     document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
