@@ -216,11 +216,13 @@ fieldset label{
 	width: 120px;
 }
 
-input{
+input, 
+textarea{
 	margin: 25px 10px;
 	font-size: 1.15em;
 	color: var(--dark-blue);
 	background-color: var(--light-gray);
+	font-family: Corbel, sans-serif;
 }
 
 .formButton {
@@ -247,6 +249,16 @@ input{
 	border: 1px solid var(--tan);
 	color: var(--pink);
 	padding: 10px 10px 10px 75px;
+}
+
+/*intro form*/
+#intro label {
+	width: 100%;
+	text-align: left;
+}
+
+#courses div{
+	border: 1px solid var(--tan);
 }
 
 /*footer and validation links*/

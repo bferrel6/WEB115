@@ -12,18 +12,24 @@ document.getElementById('send').onclick = function welcome() {
     
     const greetingBase = "Welcome to <em>Veloniti</em>&trade;"
 
-    // update names to proper case
+    // update first name to proper case
     function properName(name) {
-    return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+        return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
     }
     userName.first = properName(userName.first);
-    userName.last = properName(userName.last);
+    
+    // only update last name with user approval
+    if (userName.last.charAt(0).toLowerCase() === userName.last.charAt(0)) {
+        if (!(confirm('Does your last name begin with a lowercase letter?'))) {
+            userName.last = properName(userName.last);
+        }
+    }
 
     // update greeting based on name entered
     if (userName.first == '' && userName.last == '') { 
         greetingBanner = greetingBase
     } else if (userName.middleInitial !== '') {
-        greetingBanner = `${greetingBase}, ${userName.first} ${userName.middleInitial}. ${userName.last}!`
+        greetingBanner = `${greetingBase}, ${userName.first} ${userName.middleInitial.toUpperCase()}. ${userName.last}!`
     } else {
         greetingBanner = `${greetingBase}, ${userName.first} ${userName.last}!`
     };

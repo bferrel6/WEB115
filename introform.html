@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ben Ferrell's Boost Falcon | WEB115 | Intro Form</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/default.css">
+	<script src="scripts/addHeaderAndFooter.js" defer></script>
+    <script src="scripts/introform.js" defer></script>
+</head>
+
+<body>
+	<main>
+		<h2>Introduction Form</h2>
+        <form id="intro"> 
+            <fieldset>
+                <legend>Tell us about yourself</legend>
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" value="Benjamin Ferrell" size="102" autofocus required>
+                </div>
+                <div>
+                    <label for="personalBG">Personal Background</label>
+                    <textarea name="personalBG" 
+                        rows="2" cols="102">NC > FL > NC > SC > NC. Have lived in the Charlotte area most of my life.                        
+                    </textarea>
+                </div>
+                <div>
+                    <label for="professionalBG">Professional Background</label>
+                    <textarea name="professionalBG" 
+                        rows="2" cols="102">Worked retail/warehouse jobs for too many years. Now estimating construction, occasionally using AutoCAD.                        
+                    </textarea>
+                </div>
+                <div>
+                    <label for="academicBG">Academic Background</label>
+                    <textarea name="academicBG" 
+                        rows="2" cols="102">Studied animation about 20 years ago, now majoring in Full Stack Programming.
+                    </textarea>
+                </div>
+                <div>
+                    <label for="subjectBG">Background In This Subject</label>
+                    <textarea name="subjectBG" 
+                        rows="2" cols="102">Developed a bid tracking database with SQL Server, along with the prerequisite classes for this course.
+                    </textarea>
+                </div>
+                <div>
+                    <label for="computerPlatform">Primary Computer Platform</label>
+                    <input id="computerPlatform" type="text" value="Windows 11" size="102" required>
+                </div>
+                <div id="courses">
+                    <label><em>Courses I'm Taking & Why</em></label>
+                    <div>
+                        <label for="course1">Course 1 Name</label>
+                        <input id="course1" type="text" size="102"
+                            value="WEB140 - Web Development Tools">
+                        <label for="description1">Course 1 Description</label>
+                        <input id="description1" type="text" size="102"
+                            value="Learn about Wordpress and IDEs.">
+                    </div>
+                    <div>
+                        <label for="course2">Course 2 Name</label>
+                        <input id="course2" type="text" size="102"
+                            value="WEB115 - Web Markup and Scripting">
+                        <label for="description2">Course 2 Description</label>
+                        <input id="description2" type="text" size="102"
+                            value="Up the ante from the challenges of WEB110, and stretch reluctant creative muscles.">
+                    </div>
+                    <div>
+                        <label for="course3">Course 3 Name</label>
+                        <input id="course3" type="text" size="102"
+                            value="CTS240 - Project Management">
+                        <label for="description3">Course 3 Description</label>
+                        <input id="description3" type="text" size="102"
+                            value="Pick up very useful habits & skills, whether I stay in construction or venture into IT.">
+                    </div>
+                    <div>
+                        <label for="course4">Course 4 Name</label>
+                        <input id="course4" type="text" size="102"
+                            value="CSC121 - Python Programming">
+                        <label for="description4">Course 4 Description</label>
+                        <input id="description4" type="text" size="102"
+                            value="Delve into the possibilities of logic manipulation.">
+                    </div>
+                </div>
+                <div>
+                    <label for="funnyItem">Funny/Interesting Item About Yourself</label>
+                    <textarea name="funnyItem" 
+                        rows="2" cols="102">Unofficial IT guy at work.
+                    </textarea>
+                </div>
+                <div>
+                    <label for="alsoShare">I'd Also Like To Share</label>
+                    <textarea name="alsoShare" 
+                        rows="2" cols="102">Have you drank enough water today?
+                    </textarea>
+                </div>
+            </fieldset>
+            <div>
+                <input class="formButton" id="clear" type="reset" value="Clear">
+                <input class="formButton" id="send" type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+</body>
